@@ -8,6 +8,7 @@ import Terms from './Pages/Terms';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import ResetPassword from './Pages/ResetPassword';
+import Cta   from './Components/CTA'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/CTA" element={<Cta />} />
         <Route path="/login" element={<Login />} />
         <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>

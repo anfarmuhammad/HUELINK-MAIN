@@ -34,7 +34,7 @@ const HeroSection = () => {
             Try Now
           </Link>
           <Link
-            to="/contribute"
+            to="/CTA"
             className="bg-transparent border-2 border-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-primary transition duration-300"
           >
             Contribute
