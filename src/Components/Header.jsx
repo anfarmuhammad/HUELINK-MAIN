@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 focus:outline-none"
+            className="text-white focus:outline-none"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
@@ -26,24 +27,27 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="hidden md:flex space-x-4">
-          <Link to="/login" className="px-4 py-2 text-primary hover:bg-gray-100 rounded-md">Log In</Link>
-          <Link to="/signup" className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark">Sign Up</Link>
-          <Link to="/try" className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Try Now</Link>
-        </div>
+        <motion.div
+          className="hidden md:flex space-x-4"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
+          <Link
+            to="/trynow"
+            className="relative px-8 py-2 bg-gray-700 text-white font-bold rounded-md overflow-hidden group"
+          >
+            <span className="absolute inset-0 bg-gray-500 translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out rounded-md z-0"></span>
+            <span className="relative z-10">Try Now</span>
+          </Link>
+        </motion.div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-black py-2 px-4 shadow-lg">
+        <div className="md:hidden px-4  py-2  shadow-lg">
           <nav className="flex flex-col space-y-3">
-            <Link to="/" className="text-gray-700 hover:text-primary py-2">Home</Link>
-            <Link to="/about" className="text-gray-700 hover:text-primary py-2">About Us</Link>
-            <Link to="/features" className="text-gray-700 hover:text-primary py-2">Features</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-primary py-2">Contact</Link>
             <div className="border-t border-gray-200 pt-2">
-              <Link to="/login" className="block text-gray-700 hover:text-primary py-2">Log In</Link>
-              <Link to="/signup" className="block text-primary py-2">Sign Up</Link>
-              <Link to="/try" className="block text-green-600 hover:text-green-700 py-2 font-medium">Try Now</Link>
+              <Link to="/trynow" className=" text-white bg-gray-700 w-[120px] flex items-center justify-center rounded hover:text-gray-600 py-2 font-medium">Try Now</Link>
             </div>
           </nav>
         </div>

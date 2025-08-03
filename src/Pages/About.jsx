@@ -40,7 +40,7 @@ const About = () => {
         <section className="relative  from-primary to-secondary py-20 overflow-hidden">
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40 z-0 bg-cover" />
+          <div className="absolute bg-opacity-40 inset-0 bg-black bg-opacity-40 z-0 bg-cover" />
           {/* Video Background */}
           <video
             className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
