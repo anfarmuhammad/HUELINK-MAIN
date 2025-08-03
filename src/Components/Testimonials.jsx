@@ -21,24 +21,28 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-black text-white from-white to-slate-100 bg-cover dark:from-[#0f172a] dark:to-[#1e293b]"
+      style={{ backgroundImage: "url('https://framerusercontent.com/images/mn2zfZoubysqLkaubCf2KzJuyo.png')" }}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+        <h2 className="text-3xl font-bold text-center  dark:text-white mb-12">What Our Users Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            <div
+              key={index}
+              className="bg-black h-[300px] backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-lg text-left transition duration-300 hover:scale-105"
+            >
               <div className="flex items-center mb-4">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={`Photo of ${testimonial.name}`} 
+                <img
+                  src={testimonial.avatar}
+                  alt={`Photo of ${testimonial.name}`}
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
-                  <h4 className="font-semibold">{testimonial.name}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                  <h4 className="font-semibold  dark:text-white">{testimonial.name}</h4>
+                  <p className=" dark:text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">"{testimonial.content}"</p>
+              <p className=" dark:text-gray-300 italic">"{testimonial.content}"</p>
             </div>
           ))}
         </div>
