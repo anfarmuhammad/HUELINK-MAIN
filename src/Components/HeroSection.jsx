@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
   return (
     <div className='w-full  flex items-center bg-black justify-center shadow-2xl  '>
-      <section className="relative bg-black bg-opacity-30 backdrop-blur-lg border border-white/10 text-white py-24 rounded w-[95%] overflow-hidden shadow-1xl"
+      <section className="relative bg-black bg-opacity-30 backdrop-blur-lg border border-white/30 text-white py-36 rounded w-[95%] overflow-hidden shadow-1xl"
       >
 
 
         <div className="absolute inset-0 z-0">
           <video
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover" style={{ filter: 'brightness(40%)' }}
             autoPlay
             loop
             muted
