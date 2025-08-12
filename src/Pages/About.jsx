@@ -68,34 +68,37 @@ const About = () => {
         </section>
 
         {/* Challenge & Solution */}
+        {/* Challenge & Solution */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white">The Challenge & Our Solution</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-white">
+              The Challenge & Our Solution
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
               {/* Problem */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl shadow-lg cursor-pointer"
+                className="h-[300px] rounded-xl shadow-lg cursor-pointer bg-cover bg-center"
                 style={{
-                  background: 'linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
-                  backdropFilter: 'blur(10px)',
+                  backgroundImage: `url('https://images.unsplash.com/photo-1647964366344-bc680baf64e2?q=80&w=1126&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
                 }}
               >
-                <img
-                  src="https://img.icons8.com/fluency/96/error.png"
-                  alt="Problem"
-                  className="mx-auto mb-4 w-16 h-16"
-                />
-                <h3 className="text-2xl font-semibold mb-4 text-red-400">Problem (4 Key Issues)</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-200">
-                  <li>Lack of continuous speech monitoring and feedback</li>
-                  <li>Limited access to personalized exercises</li>
-                  <li>Delayed intervention for speech challenges</li>
-                  <li>Social anxiety & lack of confidence due to speech difficulties</li>
-                </ul>
+                {/* Dark overlay */}
+                <div className="bg-black/60 p-6 rounded-xl h-full flex flex-col justify-center">
+                  <h3 className="text-2xl font-semibold mb-4 text-red-400">
+                    Problem (4 Key Issues)
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-200">
+                    <li>Lack of continuous speech monitoring and feedback</li>
+                    <li>Limited access to personalized exercises</li>
+                    <li>Delayed intervention for speech challenges</li>
+                    <li>Social anxiety & lack of confidence due to speech difficulties</li>
+                  </ul>
+                </div>
               </motion.div>
 
               {/* Solution */}
@@ -104,29 +107,30 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl shadow-lg cursor-pointer"
+                className="h-[300px] rounded-xl shadow-lg cursor-pointer bg-cover bg-center"
                 style={{
-                  background: 'linear-gradient(to top left, rgba(255,255,255,0.07), rgba(255,255,255,0.03))',
-                  backdropFilter: 'blur(10px)',
+                  backgroundImage: `url('https://images.unsplash.com/photo-1558541966-d1071f7329bd?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
                 }}
               >
-                <img
-                  src="https://img.icons8.com/fluency/96/solution.png"
-                  alt="Solution"
-                  className="mx-auto mb-4 w-16 h-16"
-                />
-                <h3 className="text-2xl font-semibold mb-4 text-green-400">Solution (5 Key Points)</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-200">
-                  <li>Continuous, personalized AI voice analysis</li>
-                  <li>Tailored exercises for speech and language improvement</li>
-                  <li>Early detection and proactive alerts</li>
-                  <li>Gamified experience for boosted engagement and confidence</li>
-                  <li>Progress tracking and real-time professional consultation prompts</li>
-                </ul>
+                {/* Dark overlay */}
+                <div className=" bg-black/50 p-6 rounded-xl h-full flex flex-col justify-center">
+                  <h3 className="text-2xl font-semibold mb-4 text-green-400">
+                    Solution (5 Key Points)
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-200">
+                    <li>Continuous, personalized AI voice analysis</li>
+                    <li>Tailored exercises for speech and language improvement</li>
+                    <li>Early detection and proactive alerts</li>
+                    <li>Gamified experience for boosted engagement and confidence</li>
+                    <li>Progress tracking and real-time professional consultation prompts</li>
+                  </ul>
+                </div>
               </motion.div>
+
             </div>
           </div>
         </section>
+
 
         {/* Mission & Vision */}
         <section className="py-16">
