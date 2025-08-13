@@ -5,8 +5,9 @@ const Privacy = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow py-12">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <main className="flex-grow py-12 w-full h-screen text-white flex items-center text-8xl font-extrabold justify-center bg-black ">
+        <h1>COMING SOON</h1>
+        {/* <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
           
           <section className="mb-8">
@@ -89,7 +90,7 @@ const Privacy = () => {
               <strong>Effective Date:</strong> July 8, 2025
             </p>
           </section>
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>
