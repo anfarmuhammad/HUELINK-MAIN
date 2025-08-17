@@ -1,4 +1,5 @@
-import { div } from "framer-motion/client";
+import Pexel from "../assets/images/pexels.png";
+import { motion } from "framer-motion";
 
 const HowItWorks = () => {
   return (
@@ -8,24 +9,38 @@ const HowItWorks = () => {
         style={{
           backgroundImage: `
             linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-            url('https://images.pexels.com/photos/8294591/pexels-photo-8294591.jpeg')
+            url(${Pexel})
           `,
         }}
       >
         <div className="relative container flex flex-col justify-center mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6">
+          {/* Heading with smooth zoom-in */}
+          <motion.h2
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.4, ease: "easeInOut" }}
+            viewport={{ once: true }}
+          >
             What is HuLink?
-          </h2>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-medium text-gray-300 leading-relaxed">
+          </motion.h2>
+
+          {/* Paragraph with fade-up */}
+          <motion.p
+            className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-medium text-gray-300 leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             HuLink is your ultimate platform for discovering events, connecting
             with like-minded people, and building strong communities. Whether you
             are looking for activities, friends, or opportunities, HuLink brings
             everything together in one place.
-            
             With our intuitive interface, finding events and making new
             connections has never been easier. Join today and be part of a
             growing network that thrives on shared experiences.
-          </p>
+          </motion.p>
         </div>
       </section>
     </div>
@@ -33,5 +48,7 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+
+
 
 

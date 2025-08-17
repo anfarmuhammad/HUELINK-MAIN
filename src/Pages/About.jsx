@@ -32,6 +32,13 @@ const About = () => {
     }
   ];
 
+  // Animation Variants
+  const slideUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
+  const slideLeft = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } };
+  const slideRight = { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } };
+  const scaleUp = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } } };
+  const rotateIn = { hidden: { opacity: 0, rotate: -10 }, visible: { opacity: 1, rotate: 0, transition: { duration: 0.6 } } };
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
@@ -50,23 +57,40 @@ const About = () => {
             <source src={animationvideo} type="video/mp4" />
           </video>
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <motion.h1
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={slideUp}
+            >
               Our Story: Connecting Communities
-            </h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl">
+            </motion.h1>
+            <motion.h2
+              className="text-lg sm:text-xl md:text-2xl"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={slideLeft}
+            >
               Empowering individuals to find their tribe and build a better world, one connection at a time.
-            </h2>
+            </motion.h2>
           </div>
         </section>
 
         {/* Challenge & Solution */}
         <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+            <motion.h2
+              className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={scaleUp}
+            >
               The Challenge & Our Solution
-            </h2>
+            </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
               {/* Problem */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -79,9 +103,15 @@ const About = () => {
                 }}
               >
                 <div className="bg-black/60 p-4 sm:p-6 rounded-xl h-full flex flex-col justify-center">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-red-400">
+                  <motion.h3
+                    className="text-xl sm:text-2xl font-semibold mb-2 text-red-400"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={rotateIn}
+                  >
                     Problem (4 Key Issues)
-                  </h3>
+                  </motion.h3>
                   <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-gray-200 text-sm sm:text-base">
                     <li>Lack of continuous speech monitoring and feedback</li>
                     <li>Limited access to personalized exercises</li>
@@ -103,9 +133,15 @@ const About = () => {
                 }}
               >
                 <div className="bg-black/50 p-4 sm:p-6 rounded-xl h-full flex flex-col justify-center">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-green-400">
+                  <motion.h3
+                    className="text-xl sm:text-2xl font-semibold mb-2 text-green-400"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={slideRight}
+                  >
                     Solution (5 Key Points)
-                  </h3>
+                  </motion.h3>
                   <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-gray-200 text-sm sm:text-base">
                     <li>Continuous, personalized AI voice analysis</li>
                     <li>Tailored exercises for speech and language improvement</li>
@@ -115,7 +151,6 @@ const About = () => {
                   </ul>
                 </div>
               </motion.div>
-
             </div>
           </div>
         </section>
@@ -131,12 +166,20 @@ const About = () => {
               viewport={{ once: true }}
               className="p-4 sm:p-6 rounded-xl shadow-lg text-center cursor-pointer bg-black/40 backdrop-blur-sm"
             >
+              <motion.h2
+                className="text-2xl sm:text-3xl font-bold mb-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={slideLeft}
+              >
+                Our Mission
+              </motion.h2>
               <img
                 src="https://images.unsplash.com/photo-1573497491208-6b1acb260507"
                 alt="Mission"
                 className="w-full h-48 sm:h-56 object-cover rounded-lg mb-4"
               />
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Mission</h2>
               <p className="text-sm sm:text-base text-gray-200">
                 At HuLink, our mission is to break down barriers to connection, empowering individuals to discover meaningful relationships, engage in local activities, and contribute to vibrant, supportive communities.
               </p>
@@ -150,12 +193,20 @@ const About = () => {
               viewport={{ once: true }}
               className="p-4 sm:p-6 rounded-xl shadow-lg text-center cursor-pointer bg-black/30 backdrop-blur-sm"
             >
+              <motion.h2
+                className="text-2xl sm:text-3xl font-bold mb-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={scaleUp}
+              >
+                Our Vision
+              </motion.h2>
               <img
                 src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
                 alt="Vision"
                 className="w-full h-48 sm:h-56 object-cover rounded-lg mb-4"
               />
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Vision</h2>
               <p className="text-sm sm:text-base text-gray-200">
                 We envision a world where every individual feels connected, valued, and empowered to participate in their local and global communities, fostering a sense of belonging for all.
               </p>
@@ -166,9 +217,15 @@ const About = () => {
         {/* Core Values */}
         <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-white drop-shadow-lg">
+            <motion.h2
+              className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-white drop-shadow-lg"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={rotateIn}
+            >
               Our Core Values
-            </h2>
+            </motion.h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
               {values.map((value, index) => (
                 <motion.div
@@ -184,7 +241,15 @@ const About = () => {
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10">
-                    <h3 className="text-lg sm:text-xl font-extrabold mb-1">{value.title}</h3>
+                    <motion.h3
+                      className="text-lg sm:text-xl font-extrabold mb-1"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
+                      viewport={{ once: true }}
+                    >
+                      {value.title}
+                    </motion.h3>
                     <p className="text-xs sm:text-sm font-semibold text-gray-200">{value.description}</p>
                   </div>
                 </motion.div>
