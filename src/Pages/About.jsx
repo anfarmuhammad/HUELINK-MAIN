@@ -2,34 +2,43 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { motion } from 'framer-motion';
 import animationvideo from '../assets/animations/animation2.mp4';
+import Community from '../assets/images/Community.png';
+import Inclusivity from '../assets/images/Inclusivity.png';
+import Empowerment from '../assets/images/Empowerment.png';
+import Trust from '../assets/images/Trust.png';
+import Innovations from '../assets/images/Innovations.png';
+import Problem from '../assets/images/Problem.png';
+import Solution from '../assets/images/Solution.png';
+import Mission from '../assets/images/Mission.png';
+import Vision from '../assets/images/Vision.png';
 
 const About = () => {
   const values = [
     {
       title: "Community",
       description: "We believe in the power of collective action and mutual support.",
-      bg: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+      bg: Community,
     },
     {
       title: "Inclusivity",
       description: "We are committed to creating a welcoming space for everyone.",
-      bg: "https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+      bg: Inclusivity,
     },
     {
       title: "Empowerment",
       description: "We empower individuals to take initiative.",
-      bg: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+      bg: Empowerment,
     },
     {
       title: "Trust & Safety",
       description: "We prioritize a secure and respectful environment.",
-      bg: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1470&auto=format&fit=crop"
+      bg: Trust,
     },
     {
       title: "Innovation",
       description: "We continuously strive to improve and evolve.",
-      bg: "https://images.unsplash.com/photo-1535223289827-42f1e9919769"
-    }
+      bg: Innovations,
+    },
   ];
 
   // Animation Variants
@@ -98,19 +107,17 @@ const About = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="h-64 sm:h-72 md:h-80 rounded-xl shadow-lg cursor-pointer bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1647964366344-bc680baf64e2?q=80&w=1126&auto=format&fit=crop')`,
-                }}
+                style={{ backgroundImage: `url(${Problem})` }}
               >
                 <div className="bg-black/60 p-4 sm:p-6 rounded-xl h-full flex flex-col justify-center">
                   <motion.h3
-                    className="text-xl sm:text-2xl font-semibold mb-2 text-red-400"
+                    className="text-xl sm:text-2xl font-extrabold mb-2 text-red-400"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={rotateIn}
                   >
-                    Problem (4 Key Issues)
+                    Problem
                   </motion.h3>
                   <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-gray-200 text-sm sm:text-base">
                     <li>Lack of continuous speech monitoring and feedback</li>
@@ -128,19 +135,17 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="h-64 sm:h-72 md:h-80 rounded-xl shadow-lg cursor-pointer bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1558541966-d1071f7329bd?q=80&w=1333&auto=format&fit=crop')`,
-                }}
+                style={{ backgroundImage: `url(${Solution})` }}
               >
                 <div className="bg-black/50 p-4 sm:p-6 rounded-xl h-full flex flex-col justify-center">
                   <motion.h3
-                    className="text-xl sm:text-2xl font-semibold mb-2 text-green-400"
+                    className="text-xl sm:text-2xl font-extrabold mb-2 text-green-400"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={slideRight}
                   >
-                    Solution (5 Key Points)
+                    Solution 
                   </motion.h3>
                   <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-gray-200 text-sm sm:text-base">
                     <li>Continuous, personalized AI voice analysis</li>
@@ -176,11 +181,11 @@ const About = () => {
                 Our Mission
               </motion.h2>
               <img
-                src="https://images.unsplash.com/photo-1573497491208-6b1acb260507"
+                src={Mission}
                 alt="Mission"
-                className="w-full h-48 sm:h-56 object-cover rounded-lg mb-4"
+                className="w-full h-48 sm:h-96 object-cover rounded-lg mb-4"
               />
-              <p className="text-sm sm:text-base text-gray-200">
+              <p className="text-sm font-bold sm:text-base text-gray-200">
                 At HuLink, our mission is to break down barriers to connection, empowering individuals to discover meaningful relationships, engage in local activities, and contribute to vibrant, supportive communities.
               </p>
             </motion.div>
@@ -203,11 +208,11 @@ const About = () => {
                 Our Vision
               </motion.h2>
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+                src={Vision}
                 alt="Vision"
-                className="w-full h-48 sm:h-56 object-cover rounded-lg mb-4"
+                className="w-full h-48 sm:h-96 object-cover rounded-lg mb-4"
               />
-              <p className="text-sm sm:text-base text-gray-200">
+              <p className="text-sm font-bold sm:text-base text-gray-200">
                 We envision a world where every individual feels connected, valued, and empowered to participate in their local and global communities, fostering a sense of belonging for all.
               </p>
             </motion.div>
@@ -235,9 +240,7 @@ const About = () => {
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                   viewport={{ once: true }}
                   className="rounded-xl shadow-lg h-56 sm:h-64 md:h-72 flex flex-col justify-end p-4 sm:p-6 text-white bg-cover bg-center relative overflow-hidden"
-                  style={{
-                    backgroundImage: `url('${value.bg}?q=80&w=600&auto=format&fit=crop')`,
-                  }}
+                  style={{ backgroundImage: `url(${value.bg})` }}
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10">

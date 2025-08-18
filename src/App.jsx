@@ -5,7 +5,6 @@ import Features from './Pages/Features';
 import Contact from './Pages/Contact';
 import Privacy from './Pages/Privacy';
 import Terms from './Pages/Terms';
-import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import ResetPassword from './Pages/ResetPassword';
 import Cta   from './Components/CTA'
@@ -21,7 +20,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} /> 
         <Route path="/terms" element={<Terms />} /> 
-        <Route path="/signup" element={<Signup />} />
         <Route path="/trynow" element={<Trynow />} />
         <Route path="/CTA" element={<Cta />} />
         <Route path="/login" element={<Login />} />

@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import Empathy from "../assets/images/Empathy.png";
+import Innovation from "../assets/images/innovation.png";
+import Collaboration from "../assets/images/Collaboration.png";
 
 const KeyFeatures = () => {
   const features = [
@@ -6,22 +9,19 @@ const KeyFeatures = () => {
       title: "Empathy & Accessibility",
       description:
         "We design inclusive solutions that address diverse speech needs, making advanced support accessible to everyone.",
-      bgImage:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80"
+      bgImage: Empathy
     },
     {
       title: "Innovation & Quality",
       description:
         "Our team leverages the latest AI advancements to ensure accurate, effective, and transformative communication tools.",
-      bgImage:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80"
+      bgImage: Innovation
     },
     {
       title: "Empowerment & Collaboration",
       description:
         "We empower users to take control of their progress while actively collaborating with the best minds in technology and speech sciences.",
-      bgImage:
-        "https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=400&q=80"
+      bgImage: Collaboration
     }
   ];
 

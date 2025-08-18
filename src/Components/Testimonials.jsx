@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import Dot from "../assets/images/Dot.png"
 
 const Testimonials = () => {
   const testimonials = [
@@ -48,8 +49,7 @@ const Testimonials = () => {
     <section
       className="py-8 sm:py-12 md:py-16 bg-black text-white relative overflow-hidden"
       style={{
-        backgroundImage:
-          "url('https://framerusercontent.com/images/mn2zfZoubysqLkaubCf2KzJuyo.png')",
+        backgroundImage: `url(${Dot})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
