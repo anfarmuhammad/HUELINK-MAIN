@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white py-12 px-10 border-t-4 border-white/30 shadow-[0_-4px_10px_rgba(255,255,255,0.2)]">
+    <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {currentYear} HuLink. All rights reserved.</p>
         </div>
       </div>

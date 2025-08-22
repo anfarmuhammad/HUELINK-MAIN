@@ -2,53 +2,52 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 
 const Features = () => {
-  // const features = [
-  //   {
-  //     title: "Smart Event Discovery",
-  //     description: "Our intelligent recommendation engine learns your preferences to suggest events and activities you'll love, from local meetups to online workshops.",
-  //     benefits: [
-  //       "Personalized event feed",
-  //       "Location-based suggestions",
-  //       "Interest-based filtering"
-  //     ]
-  //   },
-  //   {
-  //     title: "Effortless Group Management",
-  //     description: "Whether you're starting a book club or organizing a volunteer initiative, HuLink provides intuitive tools to create, manage, and grow your community groups.",
-  //     benefits: [
-  //       "Easy group creation",
-  //       "Member management tools",
-  //       "Integrated communication for groups"
-  //     ]
-  //   },
-  //   {
-  //     title: "Secure & Private Messaging",
-  //     description: "Connect directly with individuals and groups through our secure in-app messaging system. Share ideas, coordinate plans, and build relationships with confidence.",
-  //     benefits: [
-  //       "Direct one-on-one chat",
-  //       "Group messaging",
-  //       "Robust privacy controls"
-  //     ]
-  //   }
-  // ];
+  const features = [
+    {
+      title: "Smart Event Discovery",
+      description: "Our intelligent recommendation engine learns your preferences to suggest events and activities you'll love, from local meetups to online workshops.",
+      benefits: [
+        "Personalized event feed",
+        "Location-based suggestions",
+        "Interest-based filtering"
+      ]
+    },
+    {
+      title: "Effortless Group Management",
+      description: "Whether you're starting a book club or organizing a volunteer initiative, HuLink provides intuitive tools to create, manage, and grow your community groups.",
+      benefits: [
+        "Easy group creation",
+        "Member management tools",
+        "Integrated communication for groups"
+      ]
+    },
+    {
+      title: "Secure & Private Messaging",
+      description: "Connect directly with individuals and groups through our secure in-app messaging system. Share ideas, coordinate plans, and build relationships with confidence.",
+      benefits: [
+        "Direct one-on-one chat",
+        "Group messaging",
+        "Robust privacy controls"
+      ]
+    }
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="w-full h-screen text-white flex items-center text-8xl font-extrabold justify-center bg-black">
-        <h1>COMING SOON</h1>
+      <main className="flex-grow">
         {/* Hero Section */}
-        {/* <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Unlock a World of Connection with HuLink</h1>
             <h2 className="text-xl md:text-2xl">
               Explore the powerful features designed to bring people together.
             </h2>
           </div>
-        </section> */}
+        </section>
 
         {/* Features Section */}
-        {/* <section className="py-16">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             {features.map((feature, index) => (
               <div key={index} className={`mb-16 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'} flex flex-col md:flex-row items-center gap-8`}>
@@ -74,10 +73,10 @@ const Features = () => {
               </div>
             ))}
           </div>
-        </section> */}
+        </section>
 
         {/* Demo Section */}
-        {/* <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Experience HuLink Firsthand</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -87,7 +86,7 @@ const Features = () => {
               Watch Demo
             </button>
           </div>
-        </section> */}
+        </section>
       </main>
       <Footer />
     </div>

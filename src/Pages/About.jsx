@@ -1,267 +1,79 @@
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import { motion } from 'framer-motion';
-import animationvideo from '../assets/animations/animation2.mp4';
-import Community from '../assets/images/Community.png';
-import Inclusivity from '../assets/images/Inclusivity.png';
-import Empowerment from '../assets/images/Empowerment.png';
-import Trust from '../assets/images/Trust.png';
-import Innovations from '../assets/images/Innovations.png';
-import Problem from '../assets/images/Problem.png';
-import Solution from '../assets/images/Solution.png';
-import Mission from '../assets/images/Mission.png';
-import Vision from '../assets/images/Vision.png';
 
 const About = () => {
   const values = [
     {
       title: "Community",
-      description: "We believe in the power of collective action and mutual support.",
-      bg: Community,
+      description: "We believe in the power of collective action and mutual support."
     },
     {
       title: "Inclusivity",
-      description: "We are committed to creating a welcoming space for everyone.",
-      bg: Inclusivity,
+      description: "We are committed to creating a welcoming space for everyone, regardless of background."
     },
     {
       title: "Empowerment",
-      description: "We empower individuals to take initiative.",
-      bg: Empowerment,
+      description: "We empower individuals to take initiative and create the connections they seek."
     },
     {
       title: "Trust & Safety",
-      description: "We prioritize a secure and respectful environment.",
-      bg: Trust,
+      description: "We prioritize a secure and respectful environment for all interactions."
     },
     {
       title: "Innovation",
-      description: "We continuously strive to improve and evolve.",
-      bg: Innovations,
-    },
+      description: "We continuously strive to improve and evolve our platform to better serve our users."
+    }
   ];
 
-  // Animation Variants
-  const slideUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
-  const slideLeft = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } };
-  const slideRight = { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } };
-  const scaleUp = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } } };
-  const rotateIn = { hidden: { opacity: 0, rotate: -10 }, visible: { opacity: 1, rotate: 0, transition: { duration: 0.6 } } };
-
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen flex flex-col">
       <Header />
-
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute bg-opacity-40 inset-0 bg-black z-0" />
-          <video
-            className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src={animationvideo} type="video/mp4" />
-          </video>
-          <div className="relative z-10 container mx-auto px-4 text-center">
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={slideUp}
-            >
-              Our Story: Connecting Communities
-            </motion.h1>
-            <motion.h2
-              className="text-lg sm:text-xl md:text-2xl"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={slideLeft}
-            >
+        <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Story: Connecting Communities</h1>
+            <h2 className="text-xl md:text-2xl">
               Empowering individuals to find their tribe and build a better world, one connection at a time.
-            </motion.h2>
+            </h2>
           </div>
         </section>
 
-        {/* Challenge & Solution */}
-        <section className="py-12 sm:py-16">
+        {/* Mission Section */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.h2
-              className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={scaleUp}
-            >
-              The Challenge & Our Solution
-            </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {/* Problem */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="h-64 sm:h-72 md:h-80 rounded-xl shadow-lg cursor-pointer bg-cover bg-center"
-                style={{ backgroundImage: `url(${Problem})` }}
-              >
-                <div className="bg-black/60 p-4 sm:p-6 rounded-xl h-full flex flex-col justify-center">
-                  <motion.h3
-                    className="text-xl sm:text-2xl font-extrabold mb-2 text-red-400"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={rotateIn}
-                  >
-                    Problem
-                  </motion.h3>
-                  <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-gray-200 text-sm sm:text-base">
-                    <li>Lack of continuous speech monitoring and feedback</li>
-                    <li>Limited access to personalized exercises</li>
-                    <li>Delayed intervention for speech challenges</li>
-                    <li>Social anxiety & lack of confidence due to speech difficulties</li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              {/* Solution */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="h-64 sm:h-72 md:h-80 rounded-xl shadow-lg cursor-pointer bg-cover bg-center"
-                style={{ backgroundImage: `url(${Solution})` }}
-              >
-                <div className="bg-black/50 p-4 sm:p-6 rounded-xl h-full flex flex-col justify-center">
-                  <motion.h3
-                    className="text-xl sm:text-2xl font-extrabold mb-2 text-green-400"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={slideRight}
-                  >
-                    Solution 
-                  </motion.h3>
-                  <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-gray-200 text-sm sm:text-base">
-                    <li>Continuous, personalized AI voice analysis</li>
-                    <li>Tailored exercises for speech and language improvement</li>
-                    <li>Early detection and proactive alerts</li>
-                    <li>Gamified experience for boosted engagement and confidence</li>
-                    <li>Progress tracking and real-time professional consultation prompts</li>
-                  </ul>
-                </div>
-              </motion.div>
-            </div>
+            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+            <p className="text-lg text-gray-700 max-w-3xl">
+              At HuLink, our mission is to break down barriers to connection, empowering individuals to discover meaningful relationships, engage in local activities, and contribute to vibrant, supportive communities.
+            </p>
           </div>
         </section>
 
-        {/* Mission & Vision */}
-        <section className="py-12 sm:py-16">
-          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {/* Mission */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="p-4 sm:p-6 rounded-xl shadow-lg text-center cursor-pointer bg-black/40 backdrop-blur-sm"
-            >
-              <motion.h2
-                className="text-2xl sm:text-3xl font-bold mb-4"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={slideLeft}
-              >
-                Our Mission
-              </motion.h2>
-              <img
-                src={Mission}
-                alt="Mission"
-                className="w-full h-48 sm:h-96 object-cover rounded-lg mb-4"
-              />
-              <p className="text-sm font-bold sm:text-base text-gray-200">
-                At HuLink, our mission is to break down barriers to connection, empowering individuals to discover meaningful relationships, engage in local activities, and contribute to vibrant, supportive communities.
-              </p>
-            </motion.div>
-
-            {/* Vision */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="p-4 sm:p-6 rounded-xl shadow-lg text-center cursor-pointer bg-black/30 backdrop-blur-sm"
-            >
-              <motion.h2
-                className="text-2xl sm:text-3xl font-bold mb-4"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={scaleUp}
-              >
-                Our Vision
-              </motion.h2>
-              <img
-                src={Vision}
-                alt="Vision"
-                className="w-full h-48 sm:h-96 object-cover rounded-lg mb-4"
-              />
-              <p className="text-sm font-bold sm:text-base text-gray-200">
-                We envision a world where every individual feels connected, valued, and empowered to participate in their local and global communities, fostering a sense of belonging for all.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Core Values */}
-        <section className="py-12 sm:py-16">
+        {/* Vision Section */}
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.h2
-              className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-white drop-shadow-lg"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={rotateIn}
-            >
-              Our Core Values
-            </motion.h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+            <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+            <p className="text-lg text-gray-700 max-w-3xl">
+              We envision a world where every individual feels connected, valued, and empowered to participate in their local and global communities, fostering a sense of belonging for all.
+            </p>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-12 text-center">Our Core Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {values.map((value, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                  viewport={{ once: true }}
-                  className="rounded-xl shadow-lg h-56 sm:h-64 md:h-72 flex flex-col justify-end p-4 sm:p-6 text-white bg-cover bg-center relative overflow-hidden"
-                  style={{ backgroundImage: `url(${value.bg})` }}
-                >
-                  <div className="absolute inset-0 bg-black/50"></div>
-                  <div className="relative z-10">
-                    <motion.h3
-                      className="text-lg sm:text-xl font-extrabold mb-1"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
-                      viewport={{ once: true }}
-                    >
-                      {value.title}
-                    </motion.h3>
-                    <p className="text-xs sm:text-sm font-semibold text-gray-200">{value.description}</p>
-                  </div>
-                </motion.div>
+                <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+                  <h3 className="text-xl font-semibold mb-2 text-primary">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
               ))}
             </div>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

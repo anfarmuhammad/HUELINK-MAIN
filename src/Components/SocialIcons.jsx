@@ -27,7 +27,7 @@ const SocialIcons = () => {
 
       {/* Instagram */}
       <a 
-        href="https://www.instagram.com/neuraq.in" 
+        href="https://instagram.com/hulink" 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-gray-400 hover:text-pink-600 transition-colors"
@@ -38,7 +38,7 @@ const SocialIcons = () => {
 
       {/* LinkedIn */}
       <a 
-        href="https://www.linkedin.com/company/neuraq/" 
+        href="https://linkedin.com/company/hulink" 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-gray-400 hover:text-blue-700 transition-colors"

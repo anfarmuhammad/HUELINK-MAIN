@@ -6,20 +6,19 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="w-full h-screen text-white flex items-center text-8xl font-extrabold justify-center bg-black">
-        <h1>COMING SOON</h1>
+      <main className="flex-grow">
         {/* Hero Section */}
-        {/* <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch with HuLink</h1>
             <h2 className="text-xl md:text-2xl">
               We're here to help you connect.
             </h2>
           </div>
-        </section> */}
+        </section>
 
         {/* Contact Content */}
-        {/* <section className="py-16">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -69,7 +68,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
       <Footer />
     </div>
